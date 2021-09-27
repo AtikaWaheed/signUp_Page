@@ -1,0 +1,6 @@
+.DS_Store
+.idea
+.cypress.json
+package*.json
+__pycache__/
+*.py[cod]
