@@ -6,6 +6,10 @@ bring teams together, anytime, anywhere.
 
 Pre reqs:
 ============================================
+1- Install NodeJS and NPM 
+
+Running Tests:
+======================================
 1- Create project directory
  
        mkdir Miroo_signup_Page
@@ -22,8 +26,6 @@ Pre reqs:
       
       npm install cypress
 
-Running Tests
-======================================
-1- In order to execute all tests, run command  
+5- In order to execute all tests, run command  
 
      npx cypress run  
