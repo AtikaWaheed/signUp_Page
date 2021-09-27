@@ -19,13 +19,3 @@ export const emptyTermsError = 'Please agree with the Terms to sign up.';
 export const emptyPolicyError = 'Please agree with the Terms of Service and Privacy Policy';
 export const invalidEmailError = 'This doesn’t look like an email address. Please check it for typos and try again.';
 export const alreadyRegisterAccountError = 'Sorry, this email is already registered';
-
-// Google Email and Password
-
-export const googleEmail = 'ch.atika.waheed@gmail.com';
-export const googlePasswrd = 'chatikawaheed';
-
-//Google EMail and Password Error
-
-export const emptyGoogleError = 'Enter an email or phone number';
-export const emptyGooglePasswrd = 'Enter a password';

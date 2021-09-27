@@ -28,18 +28,15 @@ export function generateRandomPassword(limit) {
   
     for (var i = 0; i < 15; i++)
       text += possible.charAt(Math.floor(Math.random() * possible.length));
-  
     return text;
   };
 
 export function getRegistrationFields( keysToBeRemoved = null, termsText='') {
+  // This wrapper function will help to iterate over all mendatory fields in form.
 
     const randomName = generateRandomtext();
     const randomEmail = enterEmailAdress();
-    const randomNum  = generateRandomPassword();
-
-    cy.log(randomEmail + '___++++++______');
-    
+    const randomNum  = generateRandomPassword();    
 
     const registerFields = {
         "name": randomName,
