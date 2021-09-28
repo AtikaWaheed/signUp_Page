@@ -28,4 +28,4 @@ Running Tests:
 
 5- In order to execute all tests, run command  
 
-     npx cypress run  
+     npx cypress run --spec "cypress/integration/test_suites/mainSignUp_page.js"  
