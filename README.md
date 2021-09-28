@@ -12,7 +12,7 @@ Running Tests:
 ======================================
 1- Create project directory
  
-       mkdir Miroo_signup_Page
+       mkdir Miro_signup_Page
 
 2- Let’s start by creating the package.json
         

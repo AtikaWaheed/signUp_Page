@@ -1,10 +1,10 @@
 /// <reference types="Cypress" />
 
 export class ValidateAllErrors {
+    // This class contains all methods related Error validations
 
     checkFieldError(field) {
-        return cy.get(`#${field}Error`);   
-            
+        return cy.get(`#${field}Error`);          
     };
 
     checkPassworErrors() {

@@ -22,7 +22,7 @@ export function generateRandomtext() {
     return text;
   };
 
-export function generateRandomPassword(limit) {
+export function generateRandomPassword() {
     var text = "";
     var possible = "abcdefghijklmnopqrstuvwxyz1234567890";
   
