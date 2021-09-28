@@ -10,9 +10,7 @@ Pre reqs:
 
 Running Tests:
 ======================================
-1- Create project directory
- 
-       mkdir Miro_signup_Page
+1- Go to the root directory of the project.
 
 2- Let’s start by creating the package.json
         
