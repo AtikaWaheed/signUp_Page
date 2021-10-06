@@ -2,21 +2,19 @@
 
 export class AccountCreatedClass {
 
-    // This class will cover Successfull Account creation page
+  getTitleFormText() {
+    return cy.get(".signup__title-form");
+  }
 
-    getTitleFormText() {
-        return cy.get('.signup__title-form');
-    };
+  getSubTitleFormText() {
+    return cy.get(".signup__subtitle-form");
+  }
 
-    getSubTitleFormText() {
-        return cy.get('.signup__subtitle-form');
-    };
+  getplaceholderText() {
+    return cy.get('[placeholder="Enter 6-digit code"]');
+  }
 
-    getplaceholderText() {
-        return cy.get('[placeholder="Enter 6-digit code"]');
-    };
-
-    getSignUpFooter() {
-        return cy.get('.signup__footer');
-    };
-};
+  getSignUpFooter() {
+    return cy.get(".signup__footer");
+  }
+}

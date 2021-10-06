@@ -1,75 +1,70 @@
 /// <reference types="Cypress" />
 
 export class ValidateLandiongMiroPage {
+  navigate(url) {
+    cy.visit(url);
+  }
 
-    // This class will cover Main Sign Up Page
+  getBrandogo() {
+    return cy.get(".overlay-signup__logo");
+  }
 
-    navigate(url) {
-        cy.visit(url);
-    };
+  getPageSourceTitle() {
+    return cy.title();
+  }
 
-    getBrandogo() {
-        return cy.get('.overlay-signup__logo');
-    };
+  getURL() {
+    return cy.url();
+  }
 
-    getPageSourceTitle() {
-        return cy.title();
-    };
+  checkGetStartedText() {
+    return cy.contains("Get started free today");
+  }
 
-    getURL() {
-        return cy.url();
-    };
+  checkCreditInfo() {
+    return cy.contains("No credit card required");
+  }
 
-    checkGetStartedText() {
-        return cy.contains('Get started free today');
-    };
+  termsCheckboxesDisabled() {
+    return cy.get('.mr-checkbox-1 [for="signup-terms"]');
+  }
 
-    checkCreditInfo() {
-        return cy.contains('No credit card required');
-    };
+  clickSubmitButton() {
+    cy.get(".signup__submit").click();
+  }
 
-    termsCheckboxesDisabled() {
-        return cy.get('.mr-checkbox-1 [for="signup-terms"]');
-    };
+  fillSignUpForm(signUpFields) {
+    if ("name" in signUpFields) {
+      const enterName = cy.get('[name="signup[name]"]');
+      enterName.clear().type(signUpFields["name"]);
+    }
 
-    clickSubmitButton() {
-        cy.get('.signup__submit').click();
-    };
+    if ("email" in signUpFields) {
+      const enterEmail = cy.get('[name="signup[email]"]');
+      enterEmail.clear().type(signUpFields["email"]);
+    }
 
-    fillSignUpForm(signUpFields) {
-        // Fill SignUp Fom
+    if ("passwrd" in signUpFields) {
+      const enterPassw = cy.get('[name="signup[password]"]');
+      enterPassw.clear().type(signUpFields["passwrd"]);
+    }
 
-        if ('name' in signUpFields) {
-            const enterName = cy.get('[name="signup[name]"]');
-            enterName.clear().type(signUpFields['name']);
-        };
+    if ("termsText" in signUpFields) {
+      cy.get('.mr-checkbox-1 [for="signup-terms"]').click();
+    }
 
-        if ('email' in signUpFields) {
-            const enterEmail = cy.get('[name="signup[email]"]');
-            enterEmail.clear().type(signUpFields['email']);
-        };
+    return signUpFields["email"];
+  }
 
-        if ('passwrd' in signUpFields) {
-            const enterPassw = cy.get('[name="signup[password]"]');
-            enterPassw.clear().type(signUpFields['passwrd']);
-        };
+  getSocialMediaIconsLength() {
+    return cy.get(".signup__social button");
+  }
 
-        if ('termsText' in signUpFields) {
-            cy.get('.mr-checkbox-1 [for="signup-terms"]').click();
-        };
+  getGoogleButtonText() {
+    return cy.get("#a11y-signup-with-google");
+  }
 
-        return signUpFields['email'];
-    };
-
-    getSocialMediaIconsLength() {
-        return cy.get('.signup__social button');
-    };
-    
-    getGoogleButtonText() {
-        return cy.get('#a11y-signup-with-google');
-    };
-    
-    getSocialContainerButtons() {
-        return cy.get('.signup__social-container img');
-    };
-};
+  getSocialContainerButtons() {
+    return cy.get(".signup__social-container img");
+  }
+}
