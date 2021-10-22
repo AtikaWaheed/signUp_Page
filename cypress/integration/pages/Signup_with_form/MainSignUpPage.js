@@ -1,11 +1,11 @@
 /// <reference types="Cypress" />
 
-export class ValidateLandiongMiroPage {
+export class MiroLandingPage {
   navigate(url) {
     cy.visit(url);
   }
 
-  getBrandogo() {
+  getBrandLogo() {
     return cy.get(".overlay-signup__logo");
   }
 
@@ -25,7 +25,7 @@ export class ValidateLandiongMiroPage {
     return cy.contains("No credit card required");
   }
 
-  termsCheckboxesDisabled() {
+  termsCheckbox() {
     return cy.get('.mr-checkbox-1 [for="signup-terms"]');
   }
 

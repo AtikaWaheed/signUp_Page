@@ -2,7 +2,7 @@
 
 import { getRegistrationFields } from "..//utils/helper_func";
 import { ValidateAllErrors } from "..//pages/Errors_check";
-import { ValidateLandiongMiroPage } from "../pages/Signup_with_form/MainSignUpPage";
+import { MiroLandingPage } from "../pages/Signup_with_form/MainSignUpPage";
 import { AccountCreatedClass } from "../pages/Signup_with_form/accountCreatedPage";
 import {
   baseUrl,
@@ -21,7 +21,7 @@ import {
 } from "..//utils/variables";
 
 describe("Validate Sign Up Miro Page", () => {
-  const SignUp_LandingPage = new ValidateLandiongMiroPage();
+  const SignUp_LandingPage = new MiroLandingPage();
   const ErrorChecks = new ValidateAllErrors();
   const AccountCreated = new AccountCreatedClass();
 
@@ -30,7 +30,7 @@ describe("Validate Sign Up Miro Page", () => {
     SignUp_LandingPage.getURL().should("include", "/signup/");
     SignUp_LandingPage.getPageSourceTitle().should("eq", pageTitle);
 
-    SignUp_LandingPage.getBrandogo()
+    SignUp_LandingPage.getBrandLogo()
       .should("have.attr", "href", "/index/")
       .and("have.attr", "title", brandTitle);
 
